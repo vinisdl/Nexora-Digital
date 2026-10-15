@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknexora=self.webpackChunknexora||[]).push([["3220"],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/Nexora-Digital/blog","blogTitle":"Blog","authorsListPath":"/Nexora-Digital/blog/authors"}')}}]);
