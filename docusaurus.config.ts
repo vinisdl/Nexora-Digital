@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Nexora Digital',
+  tagline: 'Processo SDD com OpenSpec',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -31,8 +31,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'pt-BR',
+    locales: ['pt-BR'],
   },
 
   presets: [
@@ -40,27 +40,13 @@ const config: Config = {
       'classic',
       {
         docs: {
+          path: 'processo',
+          routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/vinisdl/Nexora-Digital/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/vinisdl/Nexora-Digital/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -75,19 +61,19 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Nexora Digital',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Nexora Digital',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Processo',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/docs/sprints', label: 'Sprints', position: 'left'},
         {
           href: 'https://github.com/vinisdl/Nexora-Digital',
           label: 'GitHub',
@@ -102,25 +88,29 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Processo SDD',
+              to: '/docs',
+            },
+            {
+              label: 'Sprints',
+              to: '/docs/sprints',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Processo',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Definition of Done',
+              to: '/docs/processo/definition-of-done',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Templates OpenSpec',
+              to: '/docs/processo/templates-openspec',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Metricas',
+              to: '/docs/processo/metricas',
             },
           ],
         },
@@ -128,8 +118,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Team Chapter',
+              to: '/docs/team-chapter',
             },
             {
               label: 'GitHub',
@@ -138,7 +128,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Nexora Digital. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
