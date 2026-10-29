@@ -10,15 +10,17 @@ Verificar a consistencia do processo SDD, fechar as categorias e regras de custo
 
 ## Itens do Backlog
 
-- #21
-- #46
-- #47
-- #48
-- #49
-- #22
-- #50
-- #51
-- #52
+| ID | Item | Status |
+|----|------|--------|
+| #21 | Verificar consistencia do processo SDD e fechar categorias | Done |
+| #46 | Realizar piloto do processo SDD com equipe voluntaria em change real | Done |
+| #47 | Coletar e documentar feedback do piloto | Done |
+| #48 | Revisar e ajustar processo com base no feedback do piloto | Done |
+| #49 | Validar categorias e regras de customizacao finais | Done |
+| #22 | Implementar coleta de metricas do processo SDD | Done |
+| #50 | Definir queries WIQL para calculo de lead time no Azure DevOps | Done |
+| #51 | Criar dashboard de metricas SDD no Azure DevOps | Done |
+| #52 | Configurar alerta para lead time acima do threshold definido | Done |
 
 ## Scrum Master
 

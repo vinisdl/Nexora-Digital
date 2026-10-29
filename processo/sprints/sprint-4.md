@@ -10,11 +10,13 @@ Publicar as specs, templates e checklists OpenSpec como portal web usando Docusa
 
 ## Itens do Backlog
 
-- #23
-- #53
-- #54
-- #55
-- #56
+| ID | Item | Status |
+|----|------|--------|
+| #23 | Configurar portal Docusaurus com specs, templates e checklists | Done |
+| #53 | Instalar e configurar Docusaurus no repositorio openspec | Done |
+| #54 | Migrar specs e templates para estrutura Docusaurus | Done |
+| #55 | Publicar checklists e guias de processo como paginas do portal | Done |
+| #56 | Configurar pipeline CI/CD para deploy automatico do portal | Done |
 
 ## Scrum Master
 

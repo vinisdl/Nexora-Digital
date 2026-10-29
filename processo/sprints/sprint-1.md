@@ -12,13 +12,15 @@ Entender os 6 sintomas organizacionais que impedem a escala do processo de desen
 
 ## Itens do Backlog
 
-- #4
-- #14
-- #24
-- #25
-- #15
-- #26
-- #27
+| ID | Item | Status |
+|----|------|--------|
+| #4 | Estruturar ambiente no Azure DevOps | Done |
+| #14 | Documentar diagnostico AS-IS da Nexora Digital | Done |
+| #24 | Redigir secao AS-IS com os 6 sintomas identificados e evidencias | Done |
+| #25 | Mapear rastreabilidade: cada sintoma para decisao de processo TO-BE | Done |
+| #15 | Proposta SDD com OpenSpec - TO-BE Preliminar | Done |
+| #26 | Redigir tabela de rastreabilidade sintoma x decisao | Done |
+| #27 | Documentar ciclo OpenSpec (Propor, Revisar, Implementar, Arquivar) | Done |
 
 ## Scrum Master
 
