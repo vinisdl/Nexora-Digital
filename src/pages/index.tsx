@@ -22,18 +22,18 @@ function HomepageHeader() {
           </Heading>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <p className={styles.heroText}>
-            Portal de processo para padronizar o ciclo de mudancas da Nexora
-            Digital com especificacoes versionadas, revisao antecipada e
-            criterios claros de entrega.
+            Como a Nexora Digital desenvolve software: um só ciclo de mudança para
+            todas as equipes, especificação antes do código, gates de qualidade
+            verificáveis e rigor proporcional ao risco de cada mudança.
           </p>
           <div className={styles.buttons}>
             <Link className="button button--secondary button--lg" to="/docs">
-              Acessar processo
+              Começar pelo meu papel
             </Link>
             <Link
               className="button button--outline button--secondary button--lg"
-              to="/docs/sprints">
-              Ver sprints
+              to="/docs/exemplo/ponta-a-ponta">
+              Ver uma change do início ao fim
             </Link>
           </div>
         </div>
@@ -44,24 +44,24 @@ function HomepageHeader() {
 
 const quickLinks = [
   {
-    title: 'Diagnostico AS-IS',
-    description: 'Os 6 sintomas organizacionais que motivam o processo SDD.',
-    to: '/docs/processo/diagnostico-as-is',
+    title: 'Ciclo de vida e gates',
+    description: '5 fases, gates G1 a G4 e um só "Done" para a empresa inteira.',
+    to: '/docs/visao-geral/ciclo-de-vida',
   },
   {
-    title: 'Processo SDD',
-    description: 'Fases, responsabilidades e artefatos do ciclo OpenSpec.',
-    to: '/docs/processo/processo-sdd',
+    title: 'Qual configuração usar?',
+    description: 'Categorias pequena, média, grande e crítica e a matriz de tailoring.',
+    to: '/docs/visao-geral/categorias',
   },
   {
-    title: 'Definition of Done',
-    description: 'Criterios obrigatorios para considerar uma mudanca entregue.',
-    to: '/docs/processo/definition-of-done',
+    title: 'Templates e checklists',
+    description: 'Modelos prontos de work item, proposal, spec, PR e checklists dos gates.',
+    to: '/docs/templates',
   },
   {
-    title: 'Metricas',
-    description: 'Indicadores para medir lead time, defeitos e retrabalho.',
-    to: '/docs/processo/metricas',
+    title: 'Qualidade e métricas',
+    description: 'Critérios de qualidade, gerência de configuração, métricas e melhoria contínua.',
+    to: '/docs/governanca/qualidade',
   },
 ];
 
@@ -71,12 +71,12 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Portal de processo SDD com OpenSpec da Nexora Digital">
+      description="Portal do Processo Organizacional de Desenvolvimento de Software da Nexora Digital">
       <HomepageHeader />
       <main className={styles.main}>
         <section className={styles.section}>
           <div className="container">
-            <Heading as="h2">Documentacao principal</Heading>
+            <Heading as="h2">Acesso rápido</Heading>
             <div className={styles.quickGrid}>
               {quickLinks.map((item) => (
                 <Link className={styles.quickLink} to={item.to} key={item.to}>

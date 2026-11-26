@@ -64,6 +64,7 @@ slug: /team-chapter
 # **Membros do Time:**
 
 - [Marco Vinicius Soares Dall'Alba](/docs/team-chapter/marco-vinicius-soares-dall-alba)
+- [Matheus Grassi Milanezi](/docs/team-chapter/matheus-grassi-milanezi)
 
 # **Forças:**
 

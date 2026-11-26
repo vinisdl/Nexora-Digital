@@ -1,0 +1,64 @@
+---
+id: intro
+slug: /
+title: Processo Nexora SDD
+sidebar_label: Início
+---
+
+import {Ciclo, PapeisGrid} from '@site/src/components/Ciclo';
+
+# Processo Nexora SDD
+
+Este é o **Processo Organizacional de Desenvolvimento de Software da Nexora Digital**. Ele vale para todas as equipes e todos os produtos (Nexora Sales, Flow e Analytics), além de customizações e integrações para clientes.
+
+A ideia central é **Spec-Driven Development com OpenSpec**: a especificação vem antes do código, mora no Git junto do código e é a fonte da verdade sobre o que o sistema faz.
+
+:::info[Release 1.0]
+Esta é a primeira versão oficial do processo, validada por revisão cruzada e por um exemplo ponta a ponta. Veja o que mudou no [changelog](/docs/sobre/changelog) e como ela foi validada em [Validação](/docs/validacao).
+:::
+
+## Comece pelo seu papel
+
+<PapeisGrid />
+
+Não sabe por onde começar? Veja as [personas e jornadas](/docs/contexto/personas): elas mostram, para cada perfil, quais páginas ler e em que ordem.
+
+## O processo em uma tela
+
+<Ciclo />
+
+**Done** = cenários da spec passando + code review + aceite do PO + change arquivada. Um só "Done" para a empresa inteira.
+
+## Perguntas frequentes, respostas rápidas
+
+| Eu quero saber... | Vá para |
+|---|---|
+| Por que a Nexora precisa de um processo? | [Diagnóstico AS-IS](/docs/contexto/diagnostico-as-is) |
+| Qual configuração do processo usar no meu projeto? | [Categorias e tailoring](/docs/visao-geral/categorias) |
+| O que eu preciso fazer nesta fase? | [Fases e atividades](/docs/fases/entrada) |
+| Quem aprova o quê? | [Matriz RACI](/docs/papeis/raci) |
+| Quando uma mudança está pronta? | [Ciclo de vida e gates](/docs/visao-geral/ciclo-de-vida) e [Checklist G4](/docs/templates/checklist-g4-dod) |
+| Qual template preencher? | [Templates e checklists](/docs/templates) |
+| Qual branch criar e como versionar? | [Gerência de configuração](/docs/governanca/gerencia-de-configuracao) |
+| Como sei se o processo está funcionando? | [Métricas](/docs/governanca/metricas) |
+| Como isso fica numa mudança real? | [Exemplo ponta a ponta](/docs/exemplo/ponta-a-ponta) |
+
+## Como este portal está organizado
+
+| Seção | O que você encontra |
+|---|---|
+| [Contexto](/docs/contexto/diagnostico-as-is) | Diagnóstico, personas e a rastreabilidade problema → decisão |
+| [Visão geral](/docs/visao-geral/principios) | Princípios, metamodelo, ciclo de vida, gates e categorias |
+| [Fases e atividades](/docs/fases/entrada) | Uma ficha padrão para cada atividade: quem faz, entradas, passos, saídas e critério de saída |
+| [Papéis](/docs/papeis/raci) | Matriz RACI e a descrição de cada papel |
+| [Artefatos](/docs/artefatos/catalogo) | Catálogo AF01 a AF12 |
+| [Templates e checklists](/docs/templates) | Modelos prontos para copiar e os checklists dos gates |
+| [Ferramentas](/docs/ferramentas/azure-devops) | Como Azure DevOps, GitHub, OpenSpec, pipeline, IA e Teams se encaixam |
+| [Governança](/docs/governanca/qualidade) | Qualidade, gerência de configuração, métricas, histórico e melhoria contínua |
+| [Exemplo ponta a ponta](/docs/exemplo/ponta-a-ponta) | Uma change real passando pelos 5 gates |
+| [Validação](/docs/validacao) | Revisão cruzada e checklist de conformidade da Release 1.0 |
+| [Sobre o processo](/docs/sobre/decisoes) | Decisões de projeto, changelog, roadmap e glossário |
+
+:::tip[O processo segue o próprio processo]
+Este portal é *docs-as-code*: ele mora num repositório Git e só muda por Pull Request, como qualquer change. Quer propor uma melhoria? Veja [Melhoria contínua](/docs/governanca/melhoria-continua).
+:::

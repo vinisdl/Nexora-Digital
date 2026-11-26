@@ -28,9 +28,9 @@ Entender os 6 sintomas organizacionais que impedem a escala do processo de desen
 
 ## Principais Artefatos Gerados
 
-- [Diagnostico AS-IS](/docs/processo/diagnostico-as-is)
-- [Processo SDD - Visao Geral](/docs/processo/processo-sdd)
-- [Definition of Done](/docs/processo/definition-of-done)
+- [Diagnostico AS-IS](/docs/contexto/diagnostico-as-is)
+- [Processo SDD - Visao Geral](/docs/visao-geral/ciclo-de-vida)
+- [Definition of Done](/docs/templates/checklist-g4-dod)
 
 ## Ceremonias da Sprint
 

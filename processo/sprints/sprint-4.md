@@ -24,7 +24,7 @@ Publicar as specs, templates e checklists OpenSpec como portal web usando Docusa
 
 ## Principais Artefatos Gerados
 
-- [Portal OpenSpec - Docusaurus](https://UnisinosSoftwareProcess.github.io/Nexora-Digital)
+- [Portal OpenSpec - Docusaurus](https://vinisdl.github.io/Nexora-Digital/)
 - [Pipeline de Deploy do Portal](https://dev.azure.com/UnisinosSoftwareProcess/Nexora-Digital/_build)
 
 ## Ceremonias da Sprint

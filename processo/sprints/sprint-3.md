@@ -28,9 +28,9 @@ Verificar a consistencia do processo SDD, fechar as categorias e regras de custo
 
 ## Principais Artefatos Gerados
 
-- [Metricas de Processo](/docs/processo/metricas)
+- [Metricas de Processo](/docs/governanca/metricas)
 - [Dashboard SDD Metricas](https://dev.azure.com/UnisinosSoftwareProcess/Nexora-Digital/_dashboards)
-- [Processo SDD - Versao Consolidada](/docs/processo/processo-sdd)
+- [Processo SDD - Versao Consolidada](/docs/visao-geral/ciclo-de-vida)
 
 ## Ceremonias da Sprint
 

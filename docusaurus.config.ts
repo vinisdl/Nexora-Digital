@@ -5,32 +5,30 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Nexora Digital',
-  tagline: 'Processo SDD com OpenSpec',
+  title: 'Processo Nexora SDD',
+  tagline: 'Processo Organizacional de Desenvolvimento de Software da Nexora Digital · Release 1.0',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://vinisdl.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/Nexora-Digital/',
   trailingSlash: true,
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'vinisdl', // Usually your GitHub org/user name.
-  projectName: 'Nexora-Digital', // Usually your repo name.
+  organizationName: 'vinisdl',
+  projectName: 'Nexora-Digital',
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  markdown: {
+    format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
+
   i18n: {
     defaultLocale: 'pt-BR',
     locales: ['pt-BR'],
@@ -44,8 +42,7 @@ const config: Config = {
           path: 'processo',
           routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/vinisdl/Nexora-Digital/tree/main/',
+          editUrl: 'https://github.com/vinisdl/Nexora-Digital/tree/main/',
         },
         blog: false,
         theme: {
@@ -56,25 +53,26 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Nexora Digital',
+      title: 'Processo Nexora SDD',
       logo: {
         alt: 'Nexora Digital',
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
-          position: 'left',
-          label: 'Processo',
-        },
-        {to: '/docs/sprints', label: 'Sprints', position: 'left'},
+        {type: 'doc', docId: 'intro', label: 'Início', position: 'left'},
+        {type: 'doc', docId: 'visao-geral/ciclo-de-vida', label: 'Processo', position: 'left'},
+        {type: 'doc', docId: 'papeis/raci', label: 'Papéis', position: 'left'},
+        {type: 'doc', docId: 'templates/index', label: 'Templates', position: 'left'},
+        {type: 'doc', docId: 'governanca/qualidade', label: 'Governança', position: 'left'},
+        {type: 'doc', docId: 'exemplo/ponta-a-ponta', label: 'Exemplo', position: 'left'},
+        {type: 'doc', docId: 'sprints/index', label: 'Sprints', position: 'left'},
+        {type: 'html', position: 'right', value: '<span class="badge-versao">Release 1.0</span>'},
         {
           href: 'https://github.com/vinisdl/Nexora-Digital',
           label: 'GitHub',
@@ -86,54 +84,43 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Processo SDD',
-              to: '/docs',
-            },
-            {
-              label: 'Sprints',
-              to: '/docs/sprints',
-            },
-          ],
-        },
-        {
           title: 'Processo',
           items: [
-            {
-              label: 'Definition of Done',
-              to: '/docs/processo/definition-of-done',
-            },
-            {
-              label: 'Templates OpenSpec',
-              to: '/docs/processo/templates-openspec',
-            },
-            {
-              label: 'Metricas',
-              to: '/docs/processo/metricas',
-            },
+            {label: 'Ciclo de vida e gates', to: '/docs/visao-geral/ciclo-de-vida'},
+            {label: 'Categorias e tailoring', to: '/docs/visao-geral/categorias'},
+            {label: 'Matriz RACI', to: '/docs/papeis/raci'},
+            {label: 'Templates e checklists', to: '/docs/templates'},
           ],
         },
         {
-          title: 'More',
+          title: 'Governança',
           items: [
-            {
-              label: 'Team Chapter',
-              to: '/docs/team-chapter',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/vinisdl/Nexora-Digital',
-            },
+            {label: 'Qualidade', to: '/docs/governanca/qualidade'},
+            {label: 'Gerência de configuração', to: '/docs/governanca/gerencia-de-configuracao'},
+            {label: 'Métricas', to: '/docs/governanca/metricas'},
+            {label: 'Melhoria contínua', to: '/docs/governanca/melhoria-continua'},
+          ],
+        },
+        {
+          title: 'Sobre',
+          items: [
+            {label: 'Changelog', to: '/docs/sobre/changelog'},
+            {label: 'Validação', to: '/docs/validacao'},
+            {label: 'Team Chapter', to: '/docs/team-chapter'},
+            {label: 'GitHub', href: 'https://github.com/vinisdl/Nexora-Digital'},
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nexora Digital. Built with Docusaurus.`,
+      copyright: `Nexora Digital · Processo Organizacional de Desenvolvimento de Software · Release 1.0 · Mantido pelo Comitê do Processo · Marco V. S. Dall Alba e Matheus Milanezi · Unisinos ${new Date().getFullYear()}`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'yaml'],
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
     },
   } satisfies Preset.ThemeConfig,
 };

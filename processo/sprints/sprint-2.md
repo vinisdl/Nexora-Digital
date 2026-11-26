@@ -42,10 +42,10 @@ Detalhar o ciclo de vida SDD: fases, papeis, artefatos e ferramentas. Transforma
 
 ## Principais Artefatos Gerados
 
-- [Categorias de Change](/docs/processo/categorias-de-change)
-- [Templates OpenSpec](/docs/processo/templates-openspec)
-- [Definition of Done](/docs/processo/definition-of-done)
-- [Papeis e Responsabilidades](/docs/processo/papeis-e-responsabilidades)
+- [Categorias de Change](/docs/visao-geral/categorias)
+- [Templates OpenSpec](/docs/templates)
+- [Definition of Done](/docs/templates/checklist-g4-dod)
+- [Papeis e Responsabilidades](/docs/papeis/raci)
 
 ## Ceremonias da Sprint
 

@@ -1,0 +1,41 @@
+---
+title: Ciclo de vida e gates
+---
+
+import {Ciclo} from '@site/src/components/Ciclo';
+
+# Ciclo de vida e gates
+
+Toda mudança na Nexora, de um ajuste de tela a uma funcionalidade regulada, passa pelas **mesmas 5 fases**. O que muda por categoria é a quantidade de artefatos e de revisores, não o ciclo. Entre as fases há **gates**: critérios objetivos de entrada e saída (recomendação R1 da Sprint 5).
+
+<Ciclo />
+
+## As fases
+
+| Fase | Objetivo | Responsável (A) | Principais saídas |
+|---|---|---|---|
+| [1. Entrada](/docs/fases/entrada) | Registrar, classificar e priorizar a demanda | PO | Work item pronto (AF01) |
+| [2. Especificação](/docs/fases/especificacao) | Descrever o "o quê" antes do "como" | PO | proposal.md, delta da spec, design.md, tasks.md |
+| [3. Revisão](/docs/fases/revisao) | Aprovar a spec antes de existir código | Tech Lead | PR da spec aprovado |
+| [4. Construção](/docs/fases/construcao) | Implementar e transformar cenários em testes | Tech Lead | Código, testes, PR de código |
+| [5. Entrega](/docs/fases/entrega) | Aceitar, arquivar a change e fazer o deploy | PO | Spec oficial atualizada, release notes |
+| [Contínuo](/docs/fases/melhoria-continua) | Medir e melhorar o próprio processo | Comitê do Processo | Painel de métricas, ata da retrospectiva |
+
+## Os gates
+
+| Gate | Entre | Critério | Como é verificado |
+|---|---|---|---|
+| **G1 · Definition of Ready** | Entrada → Especificação | Problema, valor e solicitante registrados; critério de aceite em linguagem de negócio; categoria e prioridade definidas | [Checklist G1](/docs/templates/checklist-g1-dor) + campos obrigatórios no Azure DevOps |
+| **G2 · Spec completa** | Especificação → Revisão | Todo requisito tem pelo menos 1 cenário; `openspec validate --strict` passa; tasks estimadas | Automático no pipeline + [Checklist G2](/docs/templates/checklist-g2-spec-completa) |
+| **G3 · Spec aprovada** | Revisão → Construção | PR aprovado pelos revisores obrigatórios da categoria | Branch policy + CODEOWNERS + [Checklist G3](/docs/templates/checklist-g3-revisao) |
+| **G4 · Done** | Entrega → Concluído | Cenários passando + code review + aceite do PO + change arquivada | Pipeline + [Checklist G4](/docs/templates/checklist-g4-dod) |
+
+:::info[Spec reaberta]
+Se a spec mudar depois do G3, a revisão é reaberta. Isso é registrado no campo *Specs reabertas* do work item e vira métrica. Veja [Métricas](/docs/governanca/metricas).
+:::
+
+## Estados do work item
+
+Cada fase corresponde a um estado no Azure DevOps, então o board mostra em que ponto do processo cada demanda está:
+
+`Novo` → `Pronto` (G1) → `Em especificação` → `Em revisão` → `Spec aprovada` (G3) → `Em construção` → `Em entrega` → `Concluído` (G4)
